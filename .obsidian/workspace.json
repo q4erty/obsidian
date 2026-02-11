@@ -13,12 +13,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module 2/Уровень 5/Generics (обобщения).md",
+                "file": "Практика SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Generics (обобщения)"
+              "title": "Практика SQL"
+            }
+          },
+          {
+            "id": "8dfab1aa01af5ccf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.8 DWH vs Data Lake.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.8 DWH vs Data Lake"
+            }
+          },
+          {
+            "id": "73396deeaaaa6e7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.9 Модели данных DWH.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.9 Модели данных DWH"
+            }
+          },
+          {
+            "id": "823655e380da35b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.10 Представления.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.10 Представления"
             }
           },
           {
@@ -134,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -298,12 +340,16 @@
   },
   "active": "f4e3462a1ae324cd",
   "lastOpenFiles": [
-    "Теория SQL/3.6 OLAP vs OLTP.md",
+    "Теория SQL/3.9 Модели данных DWH.md",
+    "Теория SQL/3.10 Представления.md",
+    "Теория SQL/3.8 DWH vs Data Lake.md",
+    "Практика SQL.md",
+    "Module 2/Уровень 5/Generics (обобщения).md",
     "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
+    "Теория SQL/3.6 OLAP vs OLTP.md",
     "Теория SQL/3.5 Транзакции.md",
     "Module 2/Уровень 1/Объектно-ориентированное программирование.md",
     "Module 2/Уровень 1/Вопросы, которые реально часто задают по ООП.md",
-    "Module 2/Уровень 5/Generics (обобщения).md",
     "Module 1/Лекция 2/Оперативная память Java.md",
     "Module 1/Лекция 1/Преимущества Java.md",
     "Module 1/Лекция 1/Переменные в Java.md",
@@ -311,7 +357,6 @@
     "Теория SQL/3.3 Индексы.md",
     "Теория SQL/3.2 Способы оптимизации SQL запросов.md",
     "Теория SQL/3.1 DML, DDL, DCL, TCL.md",
-    "Практика SQL.md",
     "Теория SQL",
     "Module 2/Уровень 5",
     "Module 2/Уровень 4/ООП; интерфейсы (interface).md",
@@ -328,9 +373,6 @@
     "Module 1/Race condition.md",
     "Module 1/Lombok.md",
     "Module 1/Лекция 11/Принципы ООП.md",
-    "Module 1/Лекция 2/Типы данных, Память и Ввод данных.md",
-    "Module 1/Лекция 19/Singleton, Enum, Switch.md",
-    "Module 1/Лекция 24/Java NIO.md",
     "Module 1/Лекция 25",
     "Module 1/Лекция 24",
     "Module 1/Лекция 23"
