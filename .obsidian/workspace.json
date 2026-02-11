@@ -1,0 +1,338 @@
+{
+  "main": {
+    "id": "5f1222f61ff9fe51",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f53670d13931d71",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26f513a9aa21ac31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 2/Уровень 5/Generics (обобщения).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Generics (обобщения)"
+            }
+          },
+          {
+            "id": "982424d05fbaa97a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "6c142264e719c753",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.1 DML, DDL, DCL, TCL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.1 DML, DDL, DCL, TCL"
+            }
+          },
+          {
+            "id": "efe99b4ac20a0389",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.2 Способы оптимизации SQL запросов.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.2 Способы оптимизации SQL запросов"
+            }
+          },
+          {
+            "id": "779ee836a9771cf8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.3 Индексы.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.3 Индексы"
+            }
+          },
+          {
+            "id": "6f9e88c74e34994e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.4 Нормализация и денормализация данных.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.4 Нормализация и денормализация данных"
+            }
+          },
+          {
+            "id": "159536d1ccea450e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.5 Транзакции.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.5 Транзакции"
+            }
+          },
+          {
+            "id": "fa74625d6c3fee26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.6 OLAP vs OLTP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.6 OLAP vs OLTP"
+            }
+          },
+          {
+            "id": "ccb96ed25a32606b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "3.7 Slowly Changing Dimensions (SCD)"
+            }
+          }
+        ],
+        "currentTab": 8
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dbebfb9b8dfe6ff6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8eed3b16732e2ba1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4e3462a1ae324cd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "67c0357af8d27517",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ab8b57d4bee20ace",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8fb360221e7e3b23",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb31037a30a2e51d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "19d250395d138a84",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Module 1/Лекция 5/Циклы.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Циклы"
+            }
+          },
+          {
+            "id": "3d3b598581e9aaa1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Module 1/Лекция 5/Циклы.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Циклы"
+            }
+          },
+          {
+            "id": "de686cce25004137",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e5d996ab10e0928d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3ab9ae511e1929c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Module 1/Лекция 5/Циклы.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Циклы"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f4e3462a1ae324cd",
+  "lastOpenFiles": [
+    "Теория SQL/3.6 OLAP vs OLTP.md",
+    "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
+    "Теория SQL/3.5 Транзакции.md",
+    "Module 2/Уровень 1/Объектно-ориентированное программирование.md",
+    "Module 2/Уровень 1/Вопросы, которые реально часто задают по ООП.md",
+    "Module 2/Уровень 5/Generics (обобщения).md",
+    "Module 1/Лекция 2/Оперативная память Java.md",
+    "Module 1/Лекция 1/Преимущества Java.md",
+    "Module 1/Лекция 1/Переменные в Java.md",
+    "Теория SQL/3.4 Нормализация и денормализация данных.md",
+    "Теория SQL/3.3 Индексы.md",
+    "Теория SQL/3.2 Способы оптимизации SQL запросов.md",
+    "Теория SQL/3.1 DML, DDL, DCL, TCL.md",
+    "Практика SQL.md",
+    "Теория SQL",
+    "Module 2/Уровень 5",
+    "Module 2/Уровень 4/ООП; интерфейсы (interface).md",
+    "Module 2/Уровень 4",
+    "Module 2/Уровень 2/ООП; перегрузка, переопределение, абстрактные классы.md",
+    "Module 2/Уровень 2",
+    "Module 2/Уровень 1",
+    "Untitled.base",
+    "Module 1/WebSocket.md",
+    "Module 2",
+    "Module 1/Лекция 9/Строки, Константы и Область видимости.md",
+    "Module 1/Лекция 12/Обьект.md",
+    "Module 1/Лекция 23/Потоки ввода-вывода.md",
+    "Module 1/Race condition.md",
+    "Module 1/Lombok.md",
+    "Module 1/Лекция 11/Принципы ООП.md",
+    "Module 1/Лекция 2/Типы данных, Память и Ввод данных.md",
+    "Module 1/Лекция 19/Singleton, Enum, Switch.md",
+    "Module 1/Лекция 24/Java NIO.md",
+    "Module 1/Лекция 25",
+    "Module 1/Лекция 24",
+    "Module 1/Лекция 23"
+  ]
+}
