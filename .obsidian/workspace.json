@@ -4,179 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "9f53670d13931d71",
+        "id": "9bf663755e4708a0",
         "type": "tabs",
         "children": [
           {
-            "id": "26f513a9aa21ac31",
+            "id": "01e7b26d8cd9ef4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Практика SQL.md",
-                "mode": "source",
+                "file": "Module 2/Уровень 18/Аннотации в Java.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Практика SQL"
+              "title": "Аннотации в Java"
             }
           },
           {
-            "id": "8dfab1aa01af5ccf",
+            "id": "b6a9a931ee932ea7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Теория SQL/3.8 DWH vs Data Lake.md",
-                "mode": "source",
+                "file": "Module 2/Уровень 19/Sockets.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.8 DWH vs Data Lake"
-            }
-          },
-          {
-            "id": "73396deeaaaa6e7b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.9 Модели данных DWH.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.9 Модели данных DWH"
-            }
-          },
-          {
-            "id": "823655e380da35b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.10 Представления.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.10 Представления"
-            }
-          },
-          {
-            "id": "982424d05fbaa97a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "6c142264e719c753",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.1 DML, DDL, DCL, TCL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.1 DML, DDL, DCL, TCL"
-            }
-          },
-          {
-            "id": "efe99b4ac20a0389",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.2 Способы оптимизации SQL запросов.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.2 Способы оптимизации SQL запросов"
-            }
-          },
-          {
-            "id": "779ee836a9771cf8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.3 Индексы.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.3 Индексы"
-            }
-          },
-          {
-            "id": "6f9e88c74e34994e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.4 Нормализация и денормализация данных.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.4 Нормализация и денормализация данных"
-            }
-          },
-          {
-            "id": "159536d1ccea450e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.5 Транзакции.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.5 Транзакции"
-            }
-          },
-          {
-            "id": "fa74625d6c3fee26",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.6 OLAP vs OLTP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.6 OLAP vs OLTP"
-            }
-          },
-          {
-            "id": "ccb96ed25a32606b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "3.7 Slowly Changing Dimensions (SCD)"
+              "title": "Sockets"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -329,6 +189,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "audio-recorder:Start/stop recording": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -338,43 +199,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "f4e3462a1ae324cd",
+  "active": "b6a9a931ee932ea7",
   "lastOpenFiles": [
-    "Теория SQL/3.9 Модели данных DWH.md",
-    "Теория SQL/3.10 Представления.md",
-    "Теория SQL/3.8 DWH vs Data Lake.md",
+    "Module 2/Уровень 19",
+    "Module 2/Уровень 18/Аннотации в Java.md",
+    "Module 2/Уровень 19/Sockets.md",
+    "Module 2/Уровень 18",
+    "Module 2/Уровень 17/Reflection API methods.md",
+    "Module 2/Уровень 2/ООП; перегрузка, переопределение, абстрактные классы.md",
+    "Module 2/Уровень 17/Reflection API.md",
+    "Module 2/Уровень 17",
+    "Module 2/Уровень 15/Внутренние и Вложенные классы.md",
+    "Module 2/Уровень 15",
+    "Module 2/Уровень 14/Thread Pool.md",
+    "Module 2/Уровень 14",
     "Практика SQL.md",
+    "Module 2/Уровень 13/Executor.md",
+    "Module 2/Уровень 13",
+    "Module 2/Уровень 12/Знакомство с нитями. Часть 2.md",
+    "Module 2/Уровень 12",
+    "Module 2/Уровень 11/Знакомство с нитями (Threads).md",
+    "Module 2/Уровень 11",
+    "Module 2/Уровень 9/Устройство класса Object.md",
+    "Module 2/Уровень 9",
+    "Module 1/Kafka.md",
+    "Module 2/Уровень 8/Особенности вызова конструкторов. Блок static.md",
+    "Module 2/Уровень 8",
+    "Module 2/Уровень 7/Приведение типов.md",
+    "Module 2/Уровень 7",
+    "Module 2/Уровень 6/Лямбда-функции.md",
     "Module 2/Уровень 5/Generics (обобщения).md",
+    "Теория SQL/3.10 Представления.md",
+    "Теория SQL/3.9 Модели данных DWH.md",
+    "Теория SQL/3.8 DWH vs Data Lake.md",
     "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
     "Теория SQL/3.6 OLAP vs OLTP.md",
     "Теория SQL/3.5 Транзакции.md",
     "Module 2/Уровень 1/Объектно-ориентированное программирование.md",
-    "Module 2/Уровень 1/Вопросы, которые реально часто задают по ООП.md",
-    "Module 1/Лекция 2/Оперативная память Java.md",
-    "Module 1/Лекция 1/Преимущества Java.md",
-    "Module 1/Лекция 1/Переменные в Java.md",
-    "Теория SQL/3.4 Нормализация и денормализация данных.md",
-    "Теория SQL/3.3 Индексы.md",
-    "Теория SQL/3.2 Способы оптимизации SQL запросов.md",
-    "Теория SQL/3.1 DML, DDL, DCL, TCL.md",
-    "Теория SQL",
-    "Module 2/Уровень 5",
-    "Module 2/Уровень 4/ООП; интерфейсы (interface).md",
-    "Module 2/Уровень 4",
-    "Module 2/Уровень 2/ООП; перегрузка, переопределение, абстрактные классы.md",
-    "Module 2/Уровень 2",
-    "Module 2/Уровень 1",
-    "Untitled.base",
-    "Module 1/WebSocket.md",
-    "Module 2",
-    "Module 1/Лекция 9/Строки, Константы и Область видимости.md",
-    "Module 1/Лекция 12/Обьект.md",
-    "Module 1/Лекция 23/Потоки ввода-вывода.md",
-    "Module 1/Race condition.md",
-    "Module 1/Lombok.md",
-    "Module 1/Лекция 11/Принципы ООП.md",
-    "Module 1/Лекция 25",
-    "Module 1/Лекция 24",
-    "Module 1/Лекция 23"
+    "Module 2/Уровень 1/Вопросы, которые реально часто задают по ООП.md"
   ]
 }
