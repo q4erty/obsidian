@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ru" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://super-dev-styles.github.io/website-assets/slides.css" rel="stylesheet">
+  <script src="https://super-dev-styles.github.io/website-assets/slides.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <link href="https://super-dev-styles.github.io/website-assets/styles.css" rel="stylesheet">
+  <link href="https://super-dev-styles.github.io/website-assets/view.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: false });</script>
+  <title>Уровень 1: Введение в Spring Framework и его экосистему</title>
+</head>
+<body>
+<div class="content lecture-content post-content">
+  <db-content>
+    <h1>Уровень 1: Введение в Spring Framework и его экосистему</h1>
+    <p>На этом уровне мы начинаем погружение в ключевую технологию для любого Java-бэкенд-разработчика — <b>Spring Framework</b>. До сих пор вы строили приложения, вручную управляя объектами и их жизненным циклом. Теперь мы перейдем на промышленный стандарт, который берет эту сложность на себя. Вы узнаете, почему Spring стал так популярен, и разберете его фундаментальные принципы: <b>инверсию управления (IoC)</b> и <b>внедрение зависимостей (DI)</b>.</p>
+    <p>Особое внимание мы уделим <b>Spring Boot</b> — надстройке, которая кардинально упрощает конфигурацию и позволяет запускать готовые к работе приложения за считанные минуты. Мы разберем, что такое <b>бины</b>, как Spring собирает из них приложение, и, конечно, создадим и запустим наш первый "Hello, World". Этот уровень заложит фундамент, на котором строятся почти все современные enterprise-системы на Java.</p>
+    <hr>
+    <h2>Сложность Enterprise-разработки</h2>
+    <p>Прежде чем мы погрузимся в Spring, давайте сделаем шаг назад. Вспомните разработку сложных серверных приложений на Java лет 15-20 назад. Это был мир <b>Java 2 Enterprise Edition (J2EE)</b>.</p>
+    <p>Чтобы создать даже простое веб-приложение, разработчику приходилось:</p>
+    <ul>
+      <li>писать массу шаблонного, повторяющегося кода (<b>boilerplate</b>);</li>
+      <li>вручную управлять жизненным циклом компонентов;</li>
+      <li>работать со сложными и громоздкими API;</li>
+      <li>глубоко погружаться в конфигурацию серверов приложений (вроде GlassFish или WebSphere).</li>
+    </ul>
+    <p>Это было дорого, медленно и требовало очень высокой квалификации для решения даже рутинных задач. Разработка бизнес-логики тонула в технических сложностях. Именно как ответ на эту боль и появился Spring.</p>
+    <div class="mermaid">
+      graph LR
+      subgraph "J2EE"
+      direction TB
+      Dev1[👨‍💻 Разработчик]
+      subgraph "Фокус на инфраструктуре"
+      id1(Boilerplate код)
+      id2(XML-конфигурация)
+      id3(Управление зависимостями)
+      id4(Настройка сервера)
+      end
+      BusinessLogic1[🏢 Бизнес-логика]
+      Dev1 --> id1 & id2 & id3 & id4
+      id1 & id2 & id3 & id4 -.-> BusinessLogic1
+      end
+
+      subgraph "Spring"
+      direction TB
+      Dev2[👨‍💻 Разработчик]
+      BusinessLogic2[🏢 Бизнес-логика]
+      SpringBox[🚀 Spring Framework]
+
+      Dev2 --> BusinessLogic2
+      BusinessLogic2 -- делегирует --> SpringBox
+
+      subgraph "Spring берет на себя"
+      id5(Boilerplate код)
+      id6(Конфигурация)
+      id7(Зависимости)
+      id8(Встроенный сервер)
+      end
+      SpringBox --> id5 & id6 & id7 & id8
+      end
+
+      style BusinessLogic1 fill:#ffebee
+      style BusinessLogic2 fill:#e8f5e8
+    </div>
+    <hr>
+    <h2>Философия и ключевые принципы</h2>
+    <p><b>Spring Framework</b> — это не просто библиотека, это целая платформа и философия, нацеленная на упрощение разработки на Java. Если говорить коротко, Spring позволяет сосредоточиться на бизнес-логике, а не на инфраструктурной обвязке.</p>
+    <p>В основе его философии лежат три кита:</p>
+    <ul>
+      <li><b>инверсия управления</b> (Inversion of Control, IoC): передача контроля над созданием и управлением объектами от программиста к фреймворку. Вы больше не пишете <code>new Service()</code>, вы просите Spring дать вам готовый <code>Service</code>.</li>
+      <li><b>внедрение зависимостей</b> (Dependency Injection, DI): конкретная реализация принципа IoC. Если вашему компоненту A для работы нужен компонент B, Spring сам найдет B и "внедрит" его в A.</li>
+      <li><b>аспектно-ориентированное программирование</b> (AOP): позволяет выделять сквозную функциональность (например, логирование, управление транзакциями, безопасность) в отдельные модули — <b>аспекты</b>.</li>
+    </ul>
+    <p>Главная цель — создание слабосвязанных компонентов, которые легко тестировать, переиспользовать и поддерживать.</p>
+    <hr>
+    <h2>IoC-контейнер и бины: новая модель управления</h2>
+    <p>Центральным элементом фреймворка является <b>IoC-контейнер</b> (или <b>ApplicationContext</b>). Это, по сути, фабрика, которая отвечает за сборку вашего приложения из отдельных частей.</p>
+    <p>Объекты, которые создаются, настраиваются и управляются IoC-контейнером, называются <b>бинами</b> (beans).</p>
+    <p>Это фундаментальный сдвиг в мышлении. Разработчик больше не создает и не связывает объекты императивно — он декларативно описывает компоненты и их зависимости, а контейнер берет на себя всю "черновую" работу.</p>
+    <h4>Традиционный подход vs. Spring IoC</h4>
+    <div class="mermaid">
+      graph LR
+      subgraph "Традиционный подход"
+      A["Разработчик пишет: repo = new DataRepo()"] --> B["Разработчик пишет: service = new DataService(repo)"];
+      B --> C[Код жестко связан];
+      end
+
+      subgraph "Подход Spring"
+      D[Разработчик описывает бины и их зависимости] --> E[IoC-контейнер];
+      E -- читает метаданные --> F[Создает, настраивает и связывает бины];
+      F --> G[Приложение готово к работе со слабосвязанными компонентами];
+      end
+    </div>
+    <p>Схема показывает, как Spring забирает на себя ответственность за создание и связывание объектов, делая систему более гибкой.</p>
+    <hr>
+    <h2>Экосистема Spring: обзор ключевых модулей</h2>
+    <p>Spring — это не монолитный фреймворк, а модульная система. Вы можете использовать только те части, которые вам нужны. Со временем вокруг ядра выросла огромная экосистема проектов.</p>
+    <p>Вот некоторые из ключевых модулей и проектов:</p>
+    <ul>
+      <li><b>Spring Core:</b> основа основ, здесь реализованы IoC-контейнер и DI.</li>
+      <li><b>Spring MVC:</b> фреймворк для создания веб-приложений и REST API по шаблону Model-View-Controller.</li>
+      <li><b>Spring Data:</b> упрощает работу с базами данных, как с реляционными (JPA/Hibernate), так и с NoSQL.</li>
+      <li><b>Spring Security:</b> мощный и гибкий фреймворк для настройки аутентификации и авторизации.</li>
+      <li><b>Spring AOP:</b> предоставляет реализацию аспектно-ориентированного программирования.</li>
+      <li><b>Spring Boot:</b> проект, который кардинально упрощает настройку и запуск Spring-приложений.</li>
+    </ul>
+    <div class="mermaid">
+      graph TD
+      subgraph "Spring Ecosystem"
+      direction TB
+      Core["Spring Core<br/>(IoC, DI, Beans)"]
+
+      subgraph "Основные модули"
+      MVC["Spring MVC<br/>(Web & REST API)"]
+      Data["Spring Data<br/>(Доступ к БД)"]
+      Security["Spring Security<br/>(Безопасность)"]
+      AOP["Spring AOP<br/>(Аспекты)"]
+      end
+
+      Boot["<b>Spring Boot</b><br/>(Автоконфигурация, Встроенный сервер, Стартеры)"]
+
+      Core --> MVC
+      Core --> Data
+      Core --> Security
+      Core --> AOP
+
+      Boot -- Упрощает и объединяет --> Core
+      Boot -- Упрощает и объединяет --> MVC
+      Boot -- Упрощает и объединяет --> Data
+      Boot -- Упрощает и объединяет --> Security
+      end
+
+      style Core fill:#ccf,stroke:#333
+      style Boot fill:#c8e6c9,stroke:#333
+    </div>
+    <hr>
+    <h2>Конфигурация: от XML к Java-based</h2>
+    <p>Изначально Spring-приложения настраивались с помощью громоздких <b>XML-файлов</b>. Вы должны были вручную описывать каждый бин и его зависимости.</p>
+    <pre><code class="language-xml">&lt;!-- Пример старой XML-конфигурации --&gt;
+&lt;beans&gt;
+    &lt;bean id="userService" class="com.example.UserService"&gt;
+        &lt;property name="userRepository" ref="userRepository"/&gt;
+    &lt;/bean&gt;
+    &lt;bean id="userRepository" class="com.example.UserRepository"/&gt;
+&lt;/beans&gt;
+</code></pre>
+    <p>Со временем Spring перешел на конфигурацию с использованием <b>Java-кода и аннотаций</b>.</p>
+    <pre><code class="language-java">// Современный подход: Java-based конфигурация
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public UserRepository userRepository() {
+        return new UserRepository();
+    }
+
+    @Bean
+    public UserService userService(UserRepository userRepository) {
+        return new UserService(userRepository);
+    }
+}
+</code></pre>
+    <p>Такой подход более нагляден, типобезопасен и позволяет использовать всю мощь языка Java для конфигурации. Сегодня XML почти не используется для этих целей.</p>
+    <hr>
+    <h2>Spring Boot</h2>
+    <p>Несмотря на переход к Java-конфигурации, настройка Spring-приложения все еще требовала выполнения множества стандартных действий. Нужно было выбрать и подключить нужные зависимости, настроить веб-сервер, сконфигурировать подключение к БД и т.д.</p>
+    <p><b>Spring Boot</b> — это проект, созданный для решения именно этой проблемы. Его девиз — <b>"Convention over Configuration"</b> (соглашение вместо конфигурации).</p>
+    <p>Он решает три главные задачи:</p>
+    <ol>
+      <li>позволяет создать готовое к запуску приложение за минуты;</li>
+      <li>Spring Boot "угадывает" ваши намерения на основе подключенных зависимостей и автоматически настраивает приложение. Например, если в зависимостях есть <code>spring-boot-starter-web</code>, он сам поднимет веб-сервер;</li>
+      <li>приложения Spring Boot содержат встроенный сервер (Tomcat, Netty или Undertow), поэтому их можно запускать как обычные Java-приложения без необходимости развертывания в отдельном сервере.</li>
+    </ol>
+    <hr>
+    <h2>Подготовка проекта</h2>
+    <p>Самый быстрый и правильный способ начать новый проект — использовать <b>Spring Initializr</b>. Это веб-инструмент (доступен на <code>start.spring.io</code>), который генерирует готовую структуру проекта с нужными зависимостями.</p>
+    <p>При создании проекта вы указываете:</p>
+    <ul>
+      <li>систему сборки <b>Maven</b> или Gradle;</li>
+      <li>язык Java или Kotlin;</li>
+      <li>версию Spring Boot;</li>
+      <li>метаданные проекта;</li>
+      <li>необходимые "стартеры".</li>
+    </ul>
+    <p><b>Стартеры</b> — это специальные Maven-зависимости, которые объединяют в себе все необходимое для определенной функциональности. Например, <code>spring-boot-starter-web</code> включает в себя Spring MVC, встроенный Tomcat и все, что нужно для создания веб-приложения.</p>
+    <pre><code class="language-xml">&lt;!-- pom.xml, сгенерированный Spring Initializr --&gt;
+&lt;parent&gt;
+    &lt;!-- Определяет версии для множества зависимостей --&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;3.2.3&lt;/version&gt;
+&lt;/parent&gt;
+
+&lt;dependencies&gt;
+    &lt;!-- Подключает все необходимое для веб-разработки --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre>
+    <hr>
+    <h2>Структура проекта Spring Boot</h2>
+    <p>Spring Initializr создает стандартную структуру Maven-проекта, которая является соглашением для большинства Java-разработчиков.</p>
+    <h4>Стандартная структура Maven-проекта</h4>
+    <div class="mermaid">
+      graph TD
+      A[my-cool-app] --> B[pom.xml];
+      A --> C[src];
+      C --> D[main];
+      C --> E[test];
+      D --> F[java];
+      D --> G[resources];
+      F --> H[com/example/mycoolapp];
+      H --> I[MyCoolAppApplication.java];
+      G --> J[application.properties];
+      G --> K[static];
+      G --> L[templates];
+    </div>
+    <ul>
+      <li><code>src/main/java</code>: здесь находится ваш исходный код на Java.</li>
+      <li><code>src/main/resources</code>: место для конфигурационных файлов (<code>application.properties</code>), статических ресурсов (CSS, JS) и шаблонов HTML.</li>
+      <li><code>src/test/java</code>: здесь лежат ваши тесты.</li>
+      <li><code>pom.xml</code>: файл сборки Maven, описывающий проект и его зависимости.</li>
+    </ul>
+    <hr>
+    <h2>Hello World на Spring Boot</h2>
+    <p>Давайте посмотрим, как мало кода нужно для создания и запуска полноценного веб-приложения, отвечающего на HTTP-запросы.</p>
+    <p>Нам понадобится всего два файла.</p>
+    <p><b>1. Класс приложения (точка входа):</b></p>
+    <pre><code class="language-java">package com.example.helloworld;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+// Эта аннотация запускает всю магию автоконфигурации
+@SpringBootApplication
+public class HelloWorldApplication {
+
+    public static void main(String[] args) {
+        // Статический метод для запуска приложения
+        SpringApplication.run(HelloWorldApplication.class, args);
+    }
+}
+</code></pre>
+    <p><b>2. REST-контроллер:</b></p>
+    <pre><code class="language-java">package com.example.helloworld;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+// Аннотация, указывающая, что это контроллер для REST API
+@RestController
+public class HelloWorldController {
+
+    // Метод будет обрабатывать GET-запросы по пути "/hello"
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello from Moon!";
+    }
+}
+</code></pre>
+    <p>После запуска <code>main</code> метода, приложение запустит встроенный Tomcat на порту 8080. Отправив GET-запрос на <code>http://localhost:8080/hello</code>, мы получим ответ "Hello from Moon!".</p>
+    <hr>
+    <h2>Как это работает? Магия @SpringBootApplication</h2>
+    <p>Одна аннотация <code>@SpringBootApplication</code> заменяет собой целые экраны конфигурации. На самом деле, это композитная аннотация, которая включает в себя три другие:</p>
+    <ul>
+      <li><code>@SpringBootConfiguration</code>: помечает класс как источник конфигурации для бинов. Это аналог <code>@Configuration</code>.</li>
+      <li><code>@EnableAutoConfiguration</code>: самая важная часть. Она говорит Spring Boot начать процесс автоконфигурации на основе classpath. Если в classpath есть Tomcat и Spring MVC, будет настроено веб-приложение. Если есть Hibernate, будет настроена работа с БД.</li>
+      <li><code>@ComponentScan</code>: указывает Spring сканировать текущий пакет (и все вложенные) на наличие компонентов (<code>@Component</code>, <code>@Service</code>, <code>@RestController</code> и т.д.) и регистрировать их как бины в контексте.</li>
+      <li></li>
+    </ul>
+    <div class="mermaid">
+      graph TD
+      A["<b>@SpringBootApplication</b>"] --> B["@SpringBootConfiguration<br/><i>(Помечает класс как источник конфигурации)</i>"];
+      A --> C["@EnableAutoConfiguration<br/><i>(Включает 'умную' автоконфигурацию)</i>"];
+      A --> D["@ComponentScan<br/><i>(Сканирует компоненты для создания бинов)</i>"];
+
+      style A fill:#c8e6c9,stroke:#388e3c,stroke-width:2px
+    </div>
+    <hr>
+    <h2>Что такое бины (Beans)?</h2>
+    <p>Мы уже несколько раз упомянули слово <b>бин</b>. Давайте дадим ему формальное определение.</p>
+    <p><b>Бин</b> (bean) — это объект, который инстанцируется, собирается и управляется <b>контейнером Spring IoC</b>.</p>
+    <p>Это могут быть любые объекты вашего приложения: сервисы, репозитории, контроллеры, фабрики, компоненты конфигурации. Вместо того чтобы создавать их вручную, вы делегируете эту задачу фреймворку.</p>
+    <p>Ключевая идея в том, что бины и зависимости между ними описываются в метаданных конфигурации (через аннотации или Java-код). Контейнер читает эти метаданные и строит из них граф зависимостей, создавая и связывая все объекты воедино при старте приложения.</p>
+    <hr>
+    <h2>Способы объявления бинов</h2>
+    <p>Есть два основных способа сообщить Spring, что ваш класс должен стать управляемым бином.</p>
+    <p><b>1. Стереотипные аннотации:</b></p>
+    <p>Вы помечаете ваш класс одной из аннотаций, и Spring автоматически найдет его при сканировании компонентов (<code>@ComponentScan</code>).</p>
+    <ul>
+      <li><code>@Component</code>: общая, базовая аннотация.</li>
+      <li><code>@Service</code>: для бизнес-логики (слой сервисов).</li>
+      <li><code>@Repository</code>: для доступа к данным (слой репозиториев).</li>
+      <li><code>@Controller</code> / <code>@RestController</code>: для обработки веб-запросов.</li>
+    </ul>
+    <pre><code class="language-java">// Spring найдет этот класс и создаст бин с именем 'dataProcessor'
+@Service
+public class DataProcessor {
+    // ... логика ...
+}
+</code></pre>
+    <p><b>2. Метод с аннотацией <code>@Bean</code>:</b></p>
+    <p>Этот способ используется внутри классов, помеченных <code>@Configuration</code>. Он нужен, когда вы хотите создать бин из класса, код которого не можете изменить (например, из сторонней библиотеки).</p>
+    <pre><code class="language-java">@Configuration
+public class ApplicationConfig {
+
+    // Этот метод создает и настраивает бин типа `ObjectMapper`
+    @Bean
+    public ObjectMapper objectMapper() {
+        ObjectMapper mapper = new ObjectMapper();
+        // Кастомная настройка...
+        return mapper;
+    }
+}
+</code></pre>
+    <hr>
+    <h2>Жизненный цикл бина</h2>
+    <p>Каждый бин в контейнере Spring проходит через определенный жизненный цикл. Полный цикл довольно сложен, но на начальном этапе важно понимать его основные фазы.</p>
+    <h4>Основные этапы жизни бина</h4>
+    <div class="mermaid">
+      graph TD
+      A[1 Сканирование и чтение метаданных] --> B[2 Создание экземпляра инстанцирование];
+      B --> C[3 Внедрение зависимостей DI];
+      C --> D[4. Пост-инициализация вызов init-методов];
+      D --> E[5. Бин готов к использованию];
+      E --> F[6. Уничтожение при закрытии контекста];
+    </div>
+    <ol>
+      <li><b>Инстанцирование:</b> контейнер создает экземпляр объекта.</li>
+      <li><b>Внедрение зависимостей:</b> Spring устанавливает значения полей, помеченных <code>@Autowired</code>, или вызывает конструкторы с параметрами.</li>
+      <li><b>Инициализация:</b> вызываются специальные методы, где можно разместить логику, которая должна выполниться после создания и настройки бина.</li>
+      <li><b>Готов к работе:</b> бин находится в контейнере и готов к использованию другими компонентами.</li>
+      <li><b>Уничтожение:</b> перед закрытием приложения контейнер вызывает методы "уничтожения" для освобождения ресурсов.</li>
+    </ol>
+    <p>Более подробно мы разберем это на следующем уровне.</p>
+    <hr>
+    <h2>Пример: связываем два компонента</h2>
+    <p>У нас есть сервис, который должен получать данные, и компонент, который эти данные предоставляет.</p>
+    <p><b>Компонент-источник данных:</b></p>
+    <pre><code class="language-java">// Этот класс будет найден Spring и зарегистрирован как бин.
+@Repository
+public class EuropeanUserProvider {
+
+    public String findUserNameById(long id) {
+        // Представим, что здесь логика похода в базу данных пользователей из Европы.
+        if (id == 1) {
+            return "Alice from Berlin";
+        }
+        return "Unknown";
+    }
+}
+</code></pre>
+    <p><b>Сервис, который использует источник данных:</b></p>
+    <pre><code class="language-java">@Service
+public class UserGreetingService {
+
+    // Объявляем зависимость.
+    private final EuropeanUserProvider userProvider;
+
+    // Просим Spring внедрить зависимость через конструктор.
+    // Аннотация @Autowired здесь необязательна для единственного конструктора.
+    public UserGreetingService(EuropeanUserProvider userProvider) {
+        this.userProvider = userProvider;
+    }
+
+    public String createGreeting(long userId) {
+        String userName = userProvider.findUserNameById(userId);
+        return "Hello, " + userName + "!";
+    }
+}
+</code></pre>
+    <p>При старте приложения Spring создаст бин <code>EuropeanUserProvider</code>. Затем, когда он будет создавать <code>UserGreetingService</code>, он увидит, что конструктору нужен <code>EuropeanUserProvider</code>, найдет уже созданный бин и передаст его в качестве аргумента. Все произойдет автоматически.</p>
+<hr>
+  </db-content>
+</div>
+</body>
+</html>

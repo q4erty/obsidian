@@ -8,35 +8,301 @@
         "type": "tabs",
         "children": [
           {
-            "id": "01e7b26d8cd9ef4b",
+            "id": "cbde217cca2d8f1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module 2/Уровень 18/Аннотации в Java.md",
+                "file": "Module 4/Уровень 7/JDBC.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Аннотации в Java"
+              "title": "JDBC"
             }
           },
           {
-            "id": "b6a9a931ee932ea7",
+            "id": "9653b9d2e2e624a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Module 2/Уровень 19/Sockets.md",
+                "file": "Module 4/Уровень 8/JDBC на практике.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sockets"
+              "title": "JDBC на практике"
+            }
+          },
+          {
+            "id": "86962a260f7555f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 9/ORM, Hibernate и JPA**.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ORM, Hibernate и JPA**"
+            }
+          },
+          {
+            "id": "bf35538b9de60f09",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 10/HQL и запросы к базе данных.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HQL и запросы к базе данных"
+            }
+          },
+          {
+            "id": "2ece4a4c001ee2b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 11/Жизненный цикл объекта в Hibernate, операции Save, Update, Delete.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Жизненный цикл объекта в Hibernate, операции Save, Update, Delete"
+            }
+          },
+          {
+            "id": "efed39570801e46f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 12/Продвинутый маппинг типов данных в Hibernate.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Продвинутый маппинг типов данных в Hibernate"
+            }
+          },
+          {
+            "id": "e21cd33fd28d28cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 13/Маппинг коллекций в SQL & Hibernate.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Маппинг коллекций в SQL & Hibernate"
+            }
+          },
+          {
+            "id": "46762ec4757dbfca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 14/Lazy Loading и Кэширование.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lazy Loading и Кэширование"
+            }
+          },
+          {
+            "id": "1f4d51137d0dce76",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 15/Сохранение иерархии классов.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Сохранение иерархии классов"
+            }
+          },
+          {
+            "id": "d9e1d2b708ad1728",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 16/Продвинутая работа с Hibernate.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Продвинутая работа с Hibernate"
+            }
+          },
+          {
+            "id": "9883148569d19fbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 16/Продвинутая работа с Hibernate.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Продвинутая работа с Hibernate"
+            }
+          },
+          {
+            "id": "9e1c3099c85746b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 17/Основы проектирования БД, Нормализация и Ключи.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Основы проектирования БД, Нормализация и Ключи"
+            }
+          },
+          {
+            "id": "69b8fa5c2c28e13c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 18/Транзакции, ACID, CAP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Транзакции, ACID, CAP"
+            }
+          },
+          {
+            "id": "a73c14a15f3bb7de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 17/Основы проектирования БД, Нормализация и Ключи.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Основы проектирования БД, Нормализация и Ключи"
+            }
+          },
+          {
+            "id": "b1503e0aa07f416d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 19/NoSQL, Кластер и Apache Cassandra.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NoSQL, Кластер и Apache Cassandra"
+            }
+          },
+          {
+            "id": "220daf666f548263",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 20/Шардирование, BigData, MapReduce.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Шардирование, BigData, MapReduce"
+            }
+          },
+          {
+            "id": "ea746aa803ac9e20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 1/Базы данных и SQL.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Базы данных и SQL"
+            }
+          },
+          {
+            "id": "32020281077d431d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 2/Сложные SQL-запросы.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Сложные SQL-запросы"
+            }
+          },
+          {
+            "id": "bb0d9753876b1426",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 3/SQL-запросы к нескольким таблицам.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL-запросы к нескольким таблицам"
+            }
+          },
+          {
+            "id": "5238d0c369ae66df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 4/SQL-типы данных и функции.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL-типы данных и функции"
+            }
+          },
+          {
+            "id": "7f233e7ba8de9235",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 4/Уровень 18/Транзакции, ACID, CAP.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Транзакции, ACID, CAP"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 20
       }
     ],
     "direction": "vertical"
@@ -199,43 +465,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "b6a9a931ee932ea7",
+  "active": "f4e3462a1ae324cd",
   "lastOpenFiles": [
-    "Module 2/Уровень 19",
-    "Module 2/Уровень 18/Аннотации в Java.md",
-    "Module 2/Уровень 19/Sockets.md",
-    "Module 2/Уровень 18",
-    "Module 2/Уровень 17/Reflection API methods.md",
-    "Module 2/Уровень 2/ООП; перегрузка, переопределение, абстрактные классы.md",
-    "Module 2/Уровень 17/Reflection API.md",
-    "Module 2/Уровень 17",
-    "Module 2/Уровень 15/Внутренние и Вложенные классы.md",
-    "Module 2/Уровень 15",
-    "Module 2/Уровень 14/Thread Pool.md",
-    "Module 2/Уровень 14",
-    "Практика SQL.md",
-    "Module 2/Уровень 13/Executor.md",
-    "Module 2/Уровень 13",
-    "Module 2/Уровень 12/Знакомство с нитями. Часть 2.md",
-    "Module 2/Уровень 12",
-    "Module 2/Уровень 11/Знакомство с нитями (Threads).md",
-    "Module 2/Уровень 11",
-    "Module 2/Уровень 9/Устройство класса Object.md",
-    "Module 2/Уровень 9",
-    "Module 1/Kafka.md",
-    "Module 2/Уровень 8/Особенности вызова конструкторов. Блок static.md",
-    "Module 2/Уровень 8",
-    "Module 2/Уровень 7/Приведение типов.md",
-    "Module 2/Уровень 7",
-    "Module 2/Уровень 6/Лямбда-функции.md",
-    "Module 2/Уровень 5/Generics (обобщения).md",
-    "Теория SQL/3.10 Представления.md",
-    "Теория SQL/3.9 Модели данных DWH.md",
-    "Теория SQL/3.8 DWH vs Data Lake.md",
-    "Теория SQL/3.7 Slowly Changing Dimensions (SCD).md",
-    "Теория SQL/3.6 OLAP vs OLTP.md",
-    "Теория SQL/3.5 Транзакции.md",
-    "Module 2/Уровень 1/Объектно-ориентированное программирование.md",
-    "Module 2/Уровень 1/Вопросы, которые реально часто задают по ООП.md"
+    "ru.javarush.spring.presentation.level01.html",
+    "Module 4/Уровень 20/ru.javarush.spring.presentation.level01.html",
+    "Module 4/Уровень 17/Основы проектирования БД, Нормализация и Ключи.md",
+    "Module 4/Уровень 16/Продвинутая работа с Hibernate.md",
+    "Module 4/Уровень 15/Сохранение иерархии классов.md",
+    "Module 4/Уровень 14/Lazy Loading и Кэширование.md",
+    "Module 4/Уровень 13/Маппинг коллекций в SQL & Hibernate.md",
+    "Module 4/Уровень 12/Продвинутый маппинг типов данных в Hibernate.md",
+    "Module 4/Уровень 11/Жизненный цикл объекта в Hibernate, операции Save, Update, Delete.md",
+    "Module 4/Уровень 10/HQL и запросы к базе данных.md",
+    "Module 4/Уровень 9/ORM, Hibernate и JPA**.md",
+    "Module 4/Уровень 8/JDBC на практике.md",
+    "Module 4/Уровень 7/JDBC.md",
+    "Module 4/Уровень 6/SQL & Hibernate.md",
+    "Module 4/Уровень 4/SQL-типы данных и функции.md",
+    "Module 4/Уровень 3/SQL-запросы к нескольким таблицам.md",
+    "Module 4/Уровень 2/Сложные SQL-запросы.md",
+    "Module 4/Уровень 1/Базы данных и SQL.md",
+    "Module 4/Уровень 20/Шардирование, BigData, MapReduce.md",
+    "Module 4/Уровень 6",
+    "Module 4/Уровень 4",
+    "Module 4/Уровень 3",
+    "Module 4/Уровень 2",
+    "Module 4/Уровень 1",
+    "Module 4/Уровень 20",
+    "Module 4/Уровень 19/NoSQL, Кластер и Apache Cassandra.md",
+    "Module 4/Уровень 19",
+    "Module 4/Уровень 17/licensed-image.jpeg",
+    "Module 4/Уровень 18/Транзакции, ACID, CAP.md",
+    "Module 4/Уровень 18",
+    "Module 4/Уровень 17",
+    "Ур.md",
+    "У.md",
+    "Module 3/Уровень 1/Maven; фазы, плагины, зависимости и сборка.md",
+    "Module 3/Уровень 3/JUnit 5.md",
+    "Module 3/Уровень 2/Maven, часть 2; Продвинутое использование Maven.md",
+    "Module 3/Уровень 13/JSP и JSTL.md"
   ]
 }
